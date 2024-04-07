@@ -149,6 +149,7 @@ import { View, Text, StyleSheet, TouchableOpacity, Platform, Animated, Easing } 
 import Voice from '@react-native-voice/voice';
 import { PermissionsAndroid } from 'react-native';
 import Microphone from 'react-native-vector-icons/FontAwesome5'; // Import FontAwesome5 from Expo vector icons
+import { Fonts } from '../style';
 
 const Home = ({ navigation }) => {
   const [isListening, setIsListening] = useState(false);
@@ -257,7 +258,7 @@ const Home = ({ navigation }) => {
           </Animated.View>
         </TouchableOpacity>
         <View style={{width:'100%',marginTop:50,backgroundColor:'#D3D3D3',borderRadius:5,height:200}}>
-        <Text style={{ fontSize: 15, textAlign: 'center', marginHorizontal: 20, marginTop: 10,paddingBottom:20 ,color:'black',height:200,borderRadius:5}}>
+        <Text style={{ fontSize: 15, textAlign: 'center', marginHorizontal: 20, marginTop: 10,paddingBottom:20 ,color:'black',height:200,borderRadius:5,fontFamily:Fonts.MEDIUM}}>
           {recognizedText}
         </Text>
         </View>
